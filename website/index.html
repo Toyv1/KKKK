@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+<link rel="stylesheet" href="style.css" />
+<meta name="description" content="Click to view outred's bio" />
+<meta name="theme-color" content="black">
+<title>outred</title>
+<style>
+    body {
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    button:hover {
+      text-decoration: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .visible {
+      display: block;
+    }
+
+    #progressContainer {
+      width: 100%;
+      max-width: 400px;
+      height: 8px;
+      background-color: #555;
+      border-radius: 10px;
+      margin: 0 auto;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+
+    #progressBar {
+      width: 0;
+      height: 100%;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+<button id="enterButton" class="hidden">Click to Enter</button>
+<audio id="audioPlayer" src="ransom.mp3" loop></audio>
+<div id="mainContent" class="hidden">
+<div class="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css" />
+<script src="snow.js" type="9be7c424e46e3e34fc2173ae-text/javascript"></script>
+<style>
+          .social-icons {
+            color: #e4e9ff;
+          }
+        </style>
+</head>
+<body>
+<div class="center">
+<div class="container blur">
+<img class="pfp-image" src="https://cdn.discordapp.com/avatars/858476546356412457/0094f8edd95598672baac4af9901ed12.webp?size=1024" alt="pfp" />
+<p class="username">@outredgames</p>
+<p class="bio-text">Hello! My name is OutRed, and I'm a software engineer!<br> I have knowledge across Python,
+HTML, CSS, JavaScript, and beyond.</p>
+<img src="https://discord.c99.nl/widget/theme-4/858476546356412457.png" alt="Discord Widget" />
+<br>
+<a target="_blank" href="https://discord.com/users/858476546356412457"><i class="fa-brands fa-discord social-icons"></i></a>
+<a target="_blank" href="https://github.com/OutRed"><i class="fa-brands fa-github social-icons"></i></a>
+<a target="_blank" href="https://tiktok.com/@outred.org"><i class="fa-brands fa-tiktok social-icons"></i></a>
+<a target="_blank" href="https://twitch.com/outred"><i class="fa-brands fa-twitch social-icons"></i></a>
+<div id="musicPlayer" class="visible">
+<div id="musicControls">
+
+</div>
+<div id="musicStatus"></div>
+<div id="progressContainer">
+<div id="progressBar"></div>
+</div>
+</div>
+</div>
+</div>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="9be7c424e46e3e34fc2173ae-|49" defer></script></body>
+</html>
+</div>
+<script type="9be7c424e46e3e34fc2173ae-text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      var enterButton = document.getElementById('enterButton');
+      var mainContent = document.getElementById('mainContent');
+      var audioPlayer = document.getElementById('audioPlayer');
+      var musicStatus = document.getElementById('musicStatus');
+      var progressBar = document.getElementById('progressBar');
+
+      var progressBarInterval; // Variable to store the interval reference
+
+      // Function to update the progress bar smoothly
+      function updateProgressBar() {
+        var currentTime = audioPlayer.currentTime;
+        var duration = audioPlayer.duration;
+        var progress = (currentTime / duration) * 100;
+        progressBar.style.width = progress + '%';
+      }
+
+      // Add event listeners
+      audioPlayer.addEventListener('play', function () {
+        musicStatus.textContent = '';
+        progressBarInterval = setInterval(updateProgressBar, 10); // Update every 10ms
+      });
+
+      audioPlayer.addEventListener('pause', function () {
+        musicStatus.textContent = '';
+        clearInterval(progressBarInterval); // Stop updating when paused
+      });
+
+      audioPlayer.addEventListener('loadedmetadata', function () {
+        progressBar.style.width = '0%';
+      });
+
+      enterButton.addEventListener('click', function () {
+        audioPlayer.play();
+        mainContent.classList.add('visible');
+        enterButton.classList.remove('visible');
+      });
+
+      setTimeout(function () {
+        enterButton.classList.add('visible');
+        enterButton.style.animation = 'fade-in 1s ease-in';
+      }, 1000);
+    });
+  </script>
+<style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+</div>
+</body>
+</html>
